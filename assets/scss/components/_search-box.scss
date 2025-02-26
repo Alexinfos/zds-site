@@ -1,3 +1,6 @@
+@use "../variables" as *;
+@use "../sprite" as *;
+
 .search-box {
     position: relative;
     margin: $length-32 auto 0;

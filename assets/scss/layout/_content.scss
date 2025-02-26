@@ -1,3 +1,6 @@
+@use "../variables" as *;
+@use "../sprite" as *;
+
 .small-content-wrapper {
     width: 90%;
     max-width: $length-512;
@@ -233,7 +236,7 @@
         margin-bottom: $length-20;
         color: $black;
 
-        @import "base/content";
+        @import "../base/content";
     }
 
     .message-content {
