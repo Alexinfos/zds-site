@@ -9,6 +9,7 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: path.resolve(__dirname, "assets/js/main.js"),
+                zmd: path.resolve(__dirname, "assets/js/main_zmd.js")
             },
             output: {
                 entryFileNames: "js/[name].js",
@@ -17,8 +18,22 @@ export default defineConfig({
                         return "css/[name][extname]";
                     }
                     return "assets/[name][extname]";
-                },
-            },
-        }
+                }
+            }
+        },
+        cssCodeSplit: true
     },
+    css: {
+        preprocessorOptions: {
+            scss: {
+                sourceMap: true
+            }
+        },
+        postcss: {
+            plugins: [
+                require("autoprefixer"),
+                require("cssnano")
+            ]
+        }
+    }
 });

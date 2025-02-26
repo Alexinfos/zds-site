@@ -1,3 +1,5 @@
+@use "../variables" as *;
+
 $content-border-color: $grey-200;
 $content-item-height: $length-96;
 $content-reaction-offset: -$length-24; // -30px to not offset the meta
