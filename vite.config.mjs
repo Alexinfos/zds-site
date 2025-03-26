@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import Spritesmith from 'vite-plugin-spritesmith';
 import autoprefixer from "autoprefixer";
 import cssnanoPlugin from "cssnano";
+import viteImageMin from "vite-plugin-imagemin";
 
 const NAME_MAP = {
   // Load all the images in the assets
@@ -117,6 +118,20 @@ export default defineConfig({
       },
       customTemplates: {
         handlebars_based_template_retina: './assets/scss/_sprite.scss.hbs',
+      }
+    }),
+    viteImageMin({
+      gifsicle: {},
+      mozjpeg: {},
+      optipng: {},
+      svgo: {
+        plugins: [
+          {
+            // Avoid over-optimizing svg animations
+            name: 'removeHiddenElems',
+            active: false
+          }
+        ]
       }
     })
     ],
