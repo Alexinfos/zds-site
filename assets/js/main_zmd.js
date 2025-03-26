@@ -1,2 +1,2 @@
 // 1. Build style
-import '../scss/zmd.scss';
+import '../scss/zmd.scss'
