@@ -178,15 +178,15 @@ export default defineConfig(({ command }) => {
       },
       cssCodeSplit: true,
       assetsInlineLimit: 0,
-      watch: {
+      watch: inWatchMode ? {
         exclude: INTERMEDIARY_ASSETS,
-      },
+      } : null,
     },
-    server: {
+    server: inWatchMode ? {
       watch: {
         ignored: INTERMEDIARY_ASSETS,
       },
-    },
+    } : null,
     plugins: [
       inWatchMode
         ? {
