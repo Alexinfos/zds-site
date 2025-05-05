@@ -1,5 +1,4 @@
 // Dynamically import all images inside the 'assets/images' directory
-// TODO: tell to vite that all of these assets must be loaded
 
 const pngAssets = import.meta.glob([
   "../assets/images/**/*.png",

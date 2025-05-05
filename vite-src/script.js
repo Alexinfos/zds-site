@@ -5,7 +5,7 @@ import ZDSAjax from "../assets/js/common/ajax";
 window.ajax = new ZDSAjax();
 
 // Other modules
-const modules = import.meta.glob([
+import.meta.glob([
     "../assets/js/common/*.js",
     "../assets/js/*.js",
   ], { eager: true, import: 'default' });

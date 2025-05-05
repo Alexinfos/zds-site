@@ -34,7 +34,7 @@ const reversed_map = Object.entries(NAME_MAP).reduce(
 );
 
 const outputHandling = {
-  process_lib_assets: (originalFileName, assetName) => {
+  process_lib_assets: (originalFileName) => {
     // Get text fonts files from packages
     if (originalFileName.startsWith("node_modules/@fontsource")) {
       return `css/files/[name][extname]`;
@@ -54,7 +54,7 @@ const outputHandling = {
     return false;
   },
 
-  process_source_assets: (originalFileName, assetName) => {
+  process_source_assets: (originalFileName) => {
     // Keep the same directory structure as in the assets directory
     const parts = originalFileName.split("/");
     if (parts[0] === "assets") {
