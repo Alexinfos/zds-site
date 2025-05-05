@@ -151,7 +151,6 @@ export default defineConfig(({ command }) => {
       outDir: "./dist",
       assetsDir: ".",
       sourcemap: true,
-      emptyOutDir: true, // TODO: remove when Gulp is needed
       rollupOptions: {
         input: NAME_MAP,
         output: {
