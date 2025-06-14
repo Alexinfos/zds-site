@@ -1,1 +1,1 @@
-import "../node_modules/easymde/dist/easymde.min.css";
+import "easymde/dist/easymde.min.css";
